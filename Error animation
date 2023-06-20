@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Error Animation</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .err-style {
+        top: 85px;
+        left: 140px;
+        font-size: 144px;
+        color: #ff0000;
+        font-family: Arial, sans-serif;
+      }
+
+      .outter-style {
+        top: 110px;
+        left: 200px;
+        width: 240px;
+        height: 240px;
+        border-radius: 240px 0 0 240px;
+        border-left: solid 15px #007bff;
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .mid-style {
+        top: 45px;
+        left: 45px;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 150px 0 150px;
+        border-left: solid 15px #b71427;
+        animation-name: spin;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .r-style {
+        top: 85px;
+        left: 405px;
+        font-size: 144px;
+        color: #ff0000;
+        font-family: Arial, sans-serif;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="err-style">Err</div>
+      <div class="outter-style">
+        <div class="mid-style"></div>
+      </div>
+      <div class="r-style">R</div>
+    </div>
+  </body>
+</html>
